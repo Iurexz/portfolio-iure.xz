@@ -15,10 +15,10 @@ export default function Navbar({
       <div className="flex items-center justify-between gap-4">
         <a
           href="#inicio"
-          className="font-display text-lg font-bold tracking-[0.12em]"
+          className="font-display text-lg font-bold tracking-[0.12em] md:ml-6 ml-3"
           onClick={(event) => onNavigate(event, "inicio")}
         >
-             IURE.XZ
+          IURE.XZ
         </a>
 
         <nav className="hidden items-center gap-5 md:flex" aria-label="Navegacao principal desktop">
