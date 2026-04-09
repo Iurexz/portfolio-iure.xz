@@ -1,17 +1,17 @@
 export const navItems = [
   { id: "sobre", label: "Sobre" },
   { id: "skills", label: "Skills" },
-  { id: "formacoes", label: "Formacoes" },
+  { id: "formacoes", label: "Formações" },
   { id: "projetos", label: "Projetos" },
-  { id: "trajetoria", label: "Trajetoria" },
+  { id: "trajetoria", label: "Trajetória" },
   { id: "contato", label: "Contato" },
 ];
 
 export const heroData = {
-  eyebrow: "Portfolio 2026",
-  title: "Azul marinho, transicoes suaves e impacto visual real.",
+  eyebrow: "Portfólio 2026",
+  title: "Meu nome é Iure \n Sou Desenvolvedor Full Stack.",
   description:
-    "Eu desenvolvo produtos digitais com equilibrio entre estetica e engenharia. Este portfolio foi refinado para uma experiencia mais fluida, moderna e com identidade visual em tons de azul marinho.",
+    "Especialista em criação de softwares, com experiência também em bots de Discord e sistemas que facilitam o dia a dia.",
   primaryCta: {
     label: "Ver projetos",
     target: "projetos",
@@ -22,35 +22,33 @@ export const heroData = {
   },
   metrics: [
     { value: "20+", label: "Projetos entregues" },
-    { value: "99%", label: "Performance media" },
+    { value: "99%", label: "Performance média" },
     { value: "24h", label: "Retorno para novos contatos" },
   ],
 };
 
 export const aboutData = {
   eyebrow: "Sobre",
-  title: "Design escuro e elegante, codigo limpo e transicoes naturais.",
+  title: "Qual tipo de DEV eu sou?",
   paragraphs: [
-    "Eu trabalho na uniao entre design e desenvolvimento para criar produtos que impressionam na primeira leitura e performam no dia a dia.",
-    "Cada projeto recebe cuidado em tipografia, espacamento, animacao e estrutura de codigo para manter qualidade e manutencao.",
+    "Profissional de tecnologia com perfil híbrido, atuando como Desenvolvedor Full Stack com experiência em suporte técnico. Tenho experiência em desenvolvimento com JavaScript (React e Node.js), com foco em construção e integração via APIs REST. Possuo conhecimento em Inteligência Artificial e busco aliar a capacidade de criação e aprimoramento de software à expertise em diagnóstico e solução de incidentes.",
   ],
   focusTitle: "Foco atual",
   focusItems: [
-    "Next.js e React",
-    "TypeScript e APIs",
-    "Motion design para UX",
-    "Performance web em mobile",
+    "React, Node.js e Next.js",
+    "JavaScript e APIs",
+    "MongoDB e PostgreSQL",
+    "Performance e otimização",
   ],
 };
 
 export const skillsData = {
   eyebrow: "Skills",
-  title: "Stack em auto-scroll com icones dinamicos do skillicons.dev.",
+  title: "Habilidades técnicas.",
   description:
-    "Esta secao usa carousel React com auto-scroll e cada card busca o icone direto do skillicons.dev junto com o nome da tecnologia.",
-  tags: ["Auto-scroll", "React carousel", "skillicons.dev", "Futuro: prints reais"],
+    "Linguagens, frameworks, bancos de dados e ferramentas que domino para criar soluções eficientes e confiáveis.",
+  tags: ["Linguagens", "Banco de Dados", "Tecnologias", "Ferramentas"],
   items: [
-    { id: "figma", label: "Figma" },
     { id: "git", label: "Git" },
     { id: "react", label: "React" },
     { id: "nextjs", label: "Next.js" },
@@ -63,47 +61,38 @@ export const skillsData = {
     { id: "express", label: "Express" },
     { id: "mongodb", label: "MongoDB" },
     { id: "postgres", label: "PostgreSQL" },
-    { id: "prisma", label: "Prisma" },
     { id: "docker", label: "Docker" },
-    { id: "firebase", label: "Firebase" },
     { id: "python", label: "Python" },
     { id: "linux", label: "Linux" },
     { id: "vscode", label: "VS Code" },
-    { id: "aws", label: "AWS" },
+    { id: "discord", label: "Discord" },
   ],
 };
 
 export const educationData = {
-  eyebrow: "Formacoes",
-  title: "Base academica e certificacoes para sustentar entregas de alto nivel.",
+  eyebrow: "Formações",
+  title: "Formação técnica com base prática em sistemas e suporte corporativo.",
   items: [
     {
-      period: "2024 - 2026",
-      title: "Analise e Desenvolvimento de Sistemas",
-      institution: "Faculdade Exemplo",
+      period: "2022 - 2025",
+      title: "Curso Técnico em Desenvolvimento de Sistemas",
+      institution: "SENAI",
       details:
-        "Formacao com foco em engenharia de software, arquitetura de sistemas e boas praticas de desenvolvimento.",
+        "Formação técnica com foco em lógica, desenvolvimento de sistemas e fundamentos para atuação em ambientes corporativos.",
     },
     {
-      period: "2025",
-      title: "Formacao Full Stack JavaScript",
-      institution: "Plataforma Exemplo",
+      period: "Capacitação complementar",
+      title: "Formação técnica complementar",
+      institution: "MegaWorks",
       details:
-        "Trilha completa de frontend e backend com React, Node.js, banco de dados e deploy em producao.",
-    },
-    {
-      period: "2026",
-      title: "Certificacao UI e Performance Web",
-      institution: "Academia Exemplo",
-      details:
-        "Capacitacao em design de interfaces modernas, acessibilidade e otimizacao de performance para web.",
+        "Pacote Adobe, Pacote Office e prática geral em hardware e software para suporte e rotina de TI.",
     },
   ],
 };
 
 export const projectsData = {
   eyebrow: "Projetos",
-  title: "Cases com visual refinado e engenharia confiavel.",
+  title: "Cases com visual refinado e engenharia confiável.",
   items: [
     {
       id: "01",
@@ -119,10 +108,10 @@ export const projectsData = {
     {
       id: "02",
       name: "DeepMetrics",
-      body: "Dashboard analitico com dados em tempo real e interfaces focadas em decisao rapida.",
+      body: "Dashboard analítico com dados em tempo real e interfaces focadas em decisão rápida.",
       tags: ["React", "Chart.js", "Node.js"],
       image: "/projects/deepmetrics.svg",
-      alt: "Painel de analises do projeto DeepMetrics com graficos.",
+      alt: "Painel de análises do projeto DeepMetrics com gráficos.",
       demoUrl: "",
       repoUrl: "",
       imageHint: "public/projects/deepmetrics.svg",
@@ -130,7 +119,7 @@ export const projectsData = {
     {
       id: "03",
       name: "Atlas Booking",
-      body: "Sistema de agenda inteligente com automacoes e painel administrativo completo.",
+      body: "Sistema de agenda inteligente com automações e painel administrativo completo.",
       tags: ["TypeScript", "Express", "Prisma"],
       image: "/projects/atlas-booking.svg",
       alt: "Interface de reservas do projeto Atlas Booking.",
@@ -142,32 +131,37 @@ export const projectsData = {
 };
 
 export const experienceData = {
-  eyebrow: "Trajetoria",
-  title: "Evolucao continua com foco em resultado.",
+  eyebrow: "Trajetória",
+  title: "Experiência em suporte técnico, sistemas corporativos e certificação digital.",
   items: [
     {
-      year: "2026",
-      title: "Projetos premium em producao",
-      body: "Entrega de experiencias digitais com identidade forte e execucao consistente.",
+      year: "2026 - Atual",
+      title: "Pessoa & Pessoa Advogados e Associados | Técnico em TI I",
+      body: "Atuação na análise de sistemas, diagnóstico de erros ligados a certificado digital, organização de máquinas com GLPI e suporte em Google Workspace.",
     },
     {
       year: "2025",
-      title: "Padronizacao e escala",
-      body: "Arquitetura de componentes, CI/CD e melhoria do ciclo de entrega.",
+      title: "Pessoa & Pessoa Advogados e Associados | Assistente de TI (concluído)",
+      body: "Suporte operacional ao time de TI com foco em atendimento técnico, organização de rotina e continuidade dos serviços internos.",
     },
     {
-      year: "2024",
-      title: "Fundacao tecnica",
-      body: "Consolidacao em frontend moderno e desenvolvimento full stack.",
+      year: "2024 - 2025",
+      title: "Pessoa & Pessoa Advogados e Associados | Estagiário de TI Suporte N1 (concluído)",
+      body: "Atendimento de suporte de primeiro nível, monitoramento de ambiente e apoio em instalação e configuração de tokens digitais.",
+    },
+    {
+      year: "2024 (3 meses)",
+      title: "YOTECH Consultoria em Sistemas | Estágio em Suporte Técnico TIC",
+      body: "Atuação no Hospital Prohope com suporte no sistema SMART, criação de usuários, manutenção de impressoras e apoio na implantação de novo sistema de ramal.",
     },
   ],
 };
 
 export const contactData = {
   eyebrow: "Contato",
-  title: "Vamos criar algo incrivel juntos.",
+  title: "Vamos criar algo incrível juntos.",
   description:
-    "Se voce quer um projeto com visual moderno, transicoes bem resolvidas e uma base tecnica confiavel, me chama para conversar.",
+    "Se você quer um projeto com visual moderno, transições bem resolvidas e uma base técnica confiável, me chama para conversar.",
   links: [
     { label: "Email", href: "mailto:seuemail@exemplo.com", external: false },
     { label: "GitHub", href: "https://github.com/", external: true },

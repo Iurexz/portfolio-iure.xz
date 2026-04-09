@@ -12,9 +12,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata = {
-  title: "Iure XZ | Portfolio",
+  title: "Iure XZ | Portfólio",
   description:
-    "Portfolio em Next.js com visual premium e transicoes suaves em tema azul marinho.",
+    "Portfólio em Next.js com visual premium e transições suaves em tema azul-marinho.",
 };
 
 export default function RootLayout({ children }) {

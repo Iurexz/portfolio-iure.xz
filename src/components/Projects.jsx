@@ -83,11 +83,11 @@ export default function Projects({
                       rel="noreferrer"
                       className="rounded-full border border-white/30 px-3 py-1.5 text-xs text-slate-200 transition-colors duration-300 hover:border-white/70"
                     >
-                      Codigo
+                      Código
                     </a>
                   ) : (
                     <span className="rounded-full border border-white/20 bg-white/5 px-3 py-1.5 text-xs text-slate-400">
-                      Codigo: adicionar URL
+                      Código: adicionar URL
                     </span>
                   )}
                 </div>

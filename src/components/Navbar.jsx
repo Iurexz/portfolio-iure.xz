@@ -21,7 +21,7 @@ export default function Navbar({
           IURE.XZ
         </a>
 
-        <nav className="hidden items-center gap-5 md:flex" aria-label="Navegacao principal desktop">
+        <nav className="hidden items-center gap-5 md:flex" aria-label="Navegação principal desktop">
           {navItems.map((item) => (
             <a
               key={item.id}
@@ -67,7 +67,7 @@ export default function Navbar({
         {isMenuOpen ? (
           <motion.nav
             className="mt-3 grid gap-1 rounded-2xl border border-white/15 bg-black/85 p-3 md:hidden"
-            aria-label="Navegacao principal mobile"
+            aria-label="Navegação principal mobile"
             initial={{ opacity: 0, y: -12, scale: 0.98 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -12, scale: 0.98 }}
