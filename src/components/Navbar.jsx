@@ -18,7 +18,7 @@ export default function Navbar({
           className="font-display text-lg font-bold tracking-[0.12em]"
           onClick={(event) => onNavigate(event, "inicio")}
         >
-          IURE.XZ
+             IURE.XZ
         </a>
 
         <nav className="hidden items-center gap-5 md:flex" aria-label="Navegacao principal desktop">
