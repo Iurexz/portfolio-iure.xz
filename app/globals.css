@@ -1,0 +1,232 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #000000;
+  --bg-soft: #070b14;
+  --line: rgba(148, 163, 184, 0.2);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --accent: #60a5fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 8% 14%, rgba(37, 99, 235, 0.19), transparent 46%),
+    radial-gradient(circle at 92% 86%, rgba(56, 189, 248, 0.13), transparent 44%),
+    radial-gradient(circle at 50% 30%, rgba(29, 78, 216, 0.08), transparent 52%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-manrope), sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-space), sans-serif;
+}
+
+.section-pad {
+  padding-top: clamp(3.2rem, 8vw, 5.8rem);
+  padding-bottom: clamp(3.2rem, 8vw, 5.8rem);
+}
+
+.eyebrow {
+  display: inline-flex;
+  color: var(--accent);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+
+.section-title {
+  margin-top: 0.8rem;
+  max-width: 16ch;
+  font-family: var(--font-space), sans-serif;
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.52;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  background-image:
+    linear-gradient(rgba(96, 165, 250, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.04) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+}
+
+.blue-flow {
+  position: fixed;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0.63;
+  filter: blur(38px);
+  border-radius: 999px;
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(14, 165, 233, 0) 0%,
+      rgba(59, 130, 246, 0.27) 15%,
+      rgba(37, 99, 235, 0.46) 50%,
+      rgba(56, 189, 248, 0.2) 82%,
+      rgba(14, 165, 233, 0) 100%
+    );
+}
+
+.blue-flow-a {
+  left: -30vw;
+  top: 10vh;
+  width: 94vw;
+  height: 190px;
+  transform: rotate(-10deg);
+  animation: flowA 34s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.blue-flow-b {
+  right: -34vw;
+  top: 40vh;
+  width: 104vw;
+  height: 230px;
+  transform: rotate(8deg);
+  animation: flowB 40s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.blue-flow-c {
+  left: -18vw;
+  bottom: 4vh;
+  width: 88vw;
+  height: 170px;
+  transform: rotate(-6deg);
+  animation: flowC 30s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+}
+
+.glass-card {
+  border: 1px solid var(--line);
+  border-radius: 1.25rem;
+  background:
+    linear-gradient(170deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.28));
+  backdrop-filter: blur(8px);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(circle at top right, rgba(96, 165, 250, 0.32), transparent 48%);
+}
+
+.dot-item {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.dot-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+.orb-a {
+  animation: driftA 18s ease-in-out infinite;
+}
+
+.orb-b {
+  animation: driftB 22s ease-in-out infinite;
+}
+
+@keyframes flowA {
+  0% {
+    transform: translateX(-28%) rotate(-10deg) scaleX(0.98);
+  }
+  50% {
+    transform: translateX(8%) rotate(-6deg) scaleX(1.05);
+  }
+  100% {
+    transform: translateX(38%) rotate(-10deg) scaleX(0.98);
+  }
+}
+
+@keyframes flowB {
+  0% {
+    transform: translateX(32%) rotate(8deg) scaleX(1.02);
+  }
+  50% {
+    transform: translateX(0%) rotate(4deg) scaleX(0.95);
+  }
+  100% {
+    transform: translateX(-34%) rotate(8deg) scaleX(1.02);
+  }
+}
+
+@keyframes flowC {
+  0%,
+  100% {
+    transform: translateX(0%) rotate(-6deg) scaleX(1);
+  }
+  50% {
+    transform: translateX(26%) rotate(-2deg) scaleX(1.08);
+  }
+}
+
+@keyframes driftA {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(18px, -26px) scale(1.08);
+  }
+}
+
+@keyframes driftB {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-22px, 16px) scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .blue-flow,
+  .orb-a,
+  .orb-b {
+    animation: none !important;
+  }
+}
