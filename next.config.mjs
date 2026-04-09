@@ -1,13 +1,13 @@
 const repoName = "portfolio-iurexz";
-const isProduction = process.env.NODE_ENV === "production";
+const isGithubPages = process.env.DEPLOY_TARGET === "github-pages";
 const pagesBasePath = `/${repoName}`;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  trailingSlash: true,
-  ...(isProduction
+  ...(isGithubPages
     ? {
+        output: "export",
+        trailingSlash: true,
         basePath: pagesBasePath,
         assetPrefix: `${pagesBasePath}/`,
       }
