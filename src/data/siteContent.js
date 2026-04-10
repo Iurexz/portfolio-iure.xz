@@ -92,7 +92,7 @@ export const educationData = {
 
 export const projectsData = {
   eyebrow: "Projetos",
-  title: "Cases com visual refinado e engenharia confiável.",
+  title: "Projetos de software com foco em performance, usabilidade e soluções práticas para desafios reais.",
   items: [
     {
       id: "01",
@@ -163,8 +163,8 @@ export const contactData = {
   description:
     "Se você quer um projeto com visual moderno, transições bem resolvidas e uma base técnica confiável, me chama para conversar.",
   links: [
-    { label: "Email", href: "mailto:seuemail@exemplo.com", external: false },
-    { label: "GitHub", href: "https://github.com/", external: true },
-    { label: "LinkedIn", href: "https://www.linkedin.com/", external: true },
+    { label: "Email", href: "mailto:iurecosta19@gmail.com", external: false },
+    { label: "GitHub", href: "https://github.com/iurexz", external: true },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/iurecs", external: true },
   ],
 };
