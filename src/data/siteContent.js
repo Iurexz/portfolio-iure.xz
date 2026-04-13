@@ -21,7 +21,7 @@ export const heroData = {
     target: "contato",
   },
   metrics: [
-    { value: "20+", label: "Projetos entregues" },
+    { value: "10+", label: "Projetos desenvolvidos" },
     { value: "99%", label: "Performance média" },
     { value: "24h", label: "Retorno para novos contatos" },
   ],
