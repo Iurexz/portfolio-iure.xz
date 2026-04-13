@@ -18,16 +18,6 @@ Personal portfolio built to showcase projects, skills, and professional experien
 
 ---
 
-## Featured Projects
-
-| Project | Stack | Link |
-|---|---|---|
-| Formulário MCFINFO | React, Vite, Node.js, Tailwind | [form.mcfinfo.com.br](https://form.mcfinfo.com.br/) |
-| CondoGate | Flutter, Dart, Firebase, SQL Server | — |
-| FinDash | Tailwind, Python, PostgreSQL | [github.com/williamsimass/findash](https://github.com/williamsimass/findash) |
-
----
-
 ## Getting Started
 
 ```bash
