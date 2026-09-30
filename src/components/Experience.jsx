@@ -16,7 +16,7 @@ export default function Experience({
       variants={sectionVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.28 }}
+      viewport={{ once: true, amount: 0.28 }}
     >
       <motion.div variants={headerVariants}>
         <p className="eyebrow">{experienceData.eyebrow}</p>

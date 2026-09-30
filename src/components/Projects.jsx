@@ -19,7 +19,7 @@ export default function Projects({
       variants={sectionVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.28 }}
+      viewport={{ once: true, amount: 0.28 }}
     >
       <motion.div variants={headerVariants}>
         <p className="eyebrow">{projectsData.eyebrow}</p>
@@ -33,7 +33,7 @@ export default function Projects({
               key={project.id}
               className="project-card glass-card group p-4"
               variants={itemVariants}
-              whileHover={{ y: -10, scale: 1.01 }}
+              whileHover={{ y: -6 }}
               transition={{ duration: 0.25 }}
             >
               <div className="relative h-48 overflow-hidden rounded-xl border border-white/10">

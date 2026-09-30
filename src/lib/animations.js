@@ -13,16 +13,14 @@ export const createSectionVariants = (direction = "up") => {
       x: offset.x,
       y: offset.y,
       scale: 0.965,
-      filter: "blur(10px)",
     },
     show: {
       opacity: 1,
       x: 0,
       y: 0,
       scale: 1,
-      filter: "blur(0px)",
       transition: {
-        duration: 0.92,
+        duration: 0.55,
         ease: [0.16, 1, 0.3, 1],
       },
     },
@@ -30,13 +28,12 @@ export const createSectionVariants = (direction = "up") => {
 };
 
 export const sectionHeaderVariants = {
-  hidden: { opacity: 0, y: 16, filter: "blur(6px)" },
+  hidden: { opacity: 0, y: 16 },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: {
-      duration: 0.56,
+      duration: 0.4,
       delay: 0.05,
       ease: [0.16, 1, 0.3, 1],
     },
@@ -44,13 +41,12 @@ export const sectionHeaderVariants = {
 };
 
 export const sectionContentVariants = {
-  hidden: { opacity: 0, y: 28, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 28 },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: {
-      duration: 0.68,
+      duration: 0.48,
       delay: 0.24,
       ease: [0.16, 1, 0.3, 1],
     },
@@ -78,7 +74,7 @@ export const itemVariants = {
     y: 0,
     scale: 1,
     transition: {
-      duration: 0.62,
+      duration: 0.45,
       ease: [0.16, 1, 0.3, 1],
     },
   },

@@ -14,7 +14,7 @@ export default function Contact({
       variants={sectionVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.28 }}
+      viewport={{ once: true, amount: 0.28 }}
     >
       <article className="glass-card p-7 sm:p-10">
         <motion.div variants={headerVariants}>

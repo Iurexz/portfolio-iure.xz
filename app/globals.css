@@ -62,9 +62,8 @@ body {
   position: fixed;
   inset: 0;
   z-index: 1;
-  opacity: 0.52;
+  opacity: 0.34;
   pointer-events: none;
-  mix-blend-mode: screen;
   background-image:
     linear-gradient(rgba(96, 165, 250, 0.04) 1px, transparent 1px),
     linear-gradient(90deg, rgba(96, 165, 250, 0.04) 1px, transparent 1px);
@@ -76,11 +75,9 @@ body {
   position: fixed;
   z-index: 3;
   pointer-events: none;
-  opacity: 0.63;
-  filter: blur(38px);
+  opacity: 0.38;
+  filter: blur(24px);
   border-radius: 999px;
-  mix-blend-mode: screen;
-  will-change: transform, opacity;
   background:
     linear-gradient(
       90deg,
@@ -98,7 +95,7 @@ body {
   width: 94vw;
   height: 190px;
   transform: rotate(-10deg);
-  animation: flowA 34s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+  animation: none;
 }
 
 .blue-flow-b {
@@ -107,7 +104,7 @@ body {
   width: 104vw;
   height: 230px;
   transform: rotate(8deg);
-  animation: flowB 40s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+  display: none;
 }
 
 .blue-flow-c {
@@ -116,15 +113,13 @@ body {
   width: 88vw;
   height: 170px;
   transform: rotate(-6deg);
-  animation: flowC 30s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+  display: none;
 }
 
 .glass-card {
   border: 1px solid var(--line);
   border-radius: 1.25rem;
-  background:
-    linear-gradient(170deg, rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.28));
-  backdrop-filter: blur(8px);
+  background: linear-gradient(170deg, rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.82));
 }
 
 .project-card {
@@ -157,66 +152,23 @@ body {
   background: var(--accent);
 }
 
-.orb-a {
-  animation: driftA 18s ease-in-out infinite;
+.skill-strip {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 1rem;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(96, 165, 250, 0.55) transparent;
 }
 
-.orb-b {
-  animation: driftB 22s ease-in-out infinite;
+.skill-strip::-webkit-scrollbar {
+  height: 6px;
 }
 
-@keyframes flowA {
-  0% {
-    transform: translateX(-28%) rotate(-10deg) scaleX(0.98);
-  }
-  50% {
-    transform: translateX(8%) rotate(-6deg) scaleX(1.05);
-  }
-  100% {
-    transform: translateX(38%) rotate(-10deg) scaleX(0.98);
-  }
-}
-
-@keyframes flowB {
-  0% {
-    transform: translateX(32%) rotate(8deg) scaleX(1.02);
-  }
-  50% {
-    transform: translateX(0%) rotate(4deg) scaleX(0.95);
-  }
-  100% {
-    transform: translateX(-34%) rotate(8deg) scaleX(1.02);
-  }
-}
-
-@keyframes flowC {
-  0%,
-  100% {
-    transform: translateX(0%) rotate(-6deg) scaleX(1);
-  }
-  50% {
-    transform: translateX(26%) rotate(-2deg) scaleX(1.08);
-  }
-}
-
-@keyframes driftA {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(18px, -26px) scale(1.08);
-  }
-}
-
-@keyframes driftB {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-22px, 16px) scale(1.1);
-  }
+.skill-strip::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(96, 165, 250, 0.55);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -228,5 +180,14 @@ body {
   .orb-a,
   .orb-b {
     animation: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .bg-grid,
+  .blue-flow,
+  .orb-a,
+  .orb-b {
+    display: none;
   }
 }

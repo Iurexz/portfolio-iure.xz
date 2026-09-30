@@ -8,7 +8,7 @@ export default function About({ shellClass, aboutData, sectionVariants, headerVa
       variants={sectionVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
     >
       <motion.div variants={headerVariants}>
         <p className="eyebrow">{aboutData.eyebrow}</p>

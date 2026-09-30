@@ -18,7 +18,7 @@ export default function Skills({
       variants={sectionVariants}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: false, amount: 0.28 }}
+      viewport={{ once: true, amount: 0.28 }}
     >
       <motion.div variants={headerVariants}>
         <p className="eyebrow">{skillsData.eyebrow}</p>
@@ -29,13 +29,13 @@ export default function Skills({
 
       <motion.div className="mt-7" variants={contentVariants}>
         <div className="space-y-4">
-          <div className="glass-card overflow-hidden py-6">
-            <SkillsMarquee items={firstRow} speed={36} />
+          <div className="glass-card py-4">
+            <SkillsMarquee items={firstRow} />
           </div>
 
           {secondRow.length > 0 ? (
-            <div className="glass-card overflow-hidden py-6">
-              <SkillsMarquee items={secondRow} direction="right" speed={30} />
+            <div className="glass-card py-4">
+              <SkillsMarquee items={secondRow} />
             </div>
           ) : null}
         </div>

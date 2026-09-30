@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import Navbar from "../src/components/Navbar";
 import Hero from "../src/components/Hero";
 import About from "../src/components/About";
@@ -116,41 +116,42 @@ export default function HomePage() {
   };
 
   return (
-    <div className="relative isolate min-h-screen overflow-x-clip bg-[var(--bg)] text-[var(--text)]">
-      <AnimatePresence>
-        {isNavTransitioning ? (
-          <motion.div
-            className="pointer-events-none fixed left-0 right-0 top-0 z-[90] h-1 origin-left bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500"
-            initial={{ scaleX: 0, opacity: 0.85 }}
-            animate={{ scaleX: 1, opacity: 1 }}
-            exit={{ opacity: 0, scaleX: 1 }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          />
-        ) : null}
-      </AnimatePresence>
+    <MotionConfig reducedMotion="user">
+      <div className="relative isolate min-h-screen overflow-x-clip bg-[var(--bg)] text-[var(--text)]">
+        <AnimatePresence>
+          {isNavTransitioning ? (
+            <motion.div
+              className="pointer-events-none fixed left-0 right-0 top-0 z-[90] h-1 origin-left bg-gradient-to-r from-blue-400 via-cyan-300 to-blue-500"
+              initial={{ scaleX: 0, opacity: 0.85 }}
+              animate={{ scaleX: 1, opacity: 1 }}
+              exit={{ opacity: 0, scaleX: 1 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            />
+          ) : null}
+        </AnimatePresence>
 
-      <div className="bg-grid" aria-hidden="true" />
-      <div className="blue-flow blue-flow-a" aria-hidden="true" />
-      <div className="blue-flow blue-flow-b" aria-hidden="true" />
-      <div className="blue-flow blue-flow-c" aria-hidden="true" />
-      <div
-        className="orb-a pointer-events-none fixed -right-24 -top-24 z-[4] h-[420px] w-[420px] rounded-full bg-blue-500/24 blur-[100px]"
-        aria-hidden="true"
-      />
-      <div
-        className="orb-b pointer-events-none fixed -bottom-20 -left-20 z-[4] h-[360px] w-[360px] rounded-full bg-blue-300/17 blur-[100px]"
-        aria-hidden="true"
-      />
-
-      <div className="relative z-20">
-        <Navbar
-          shellClass={shellClass}
-          navItems={navItems}
-          activeSection={activeSection}
-          isMenuOpen={isMenuOpen}
-          onToggleMenu={() => setIsMenuOpen((prev) => !prev)}
-          onNavigate={handleNavClick}
+        <div className="bg-grid" aria-hidden="true" />
+        <div className="blue-flow blue-flow-a" aria-hidden="true" />
+        <div className="blue-flow blue-flow-b" aria-hidden="true" />
+        <div className="blue-flow blue-flow-c" aria-hidden="true" />
+        <div
+          className="orb-a pointer-events-none fixed -right-24 -top-24 z-[4] h-[420px] w-[420px] rounded-full bg-blue-500/24 blur-[100px]"
+          aria-hidden="true"
         />
+        <div
+          className="orb-b pointer-events-none fixed -bottom-20 -left-20 z-[4] h-[360px] w-[360px] rounded-full bg-blue-300/17 blur-[100px]"
+          aria-hidden="true"
+        />
+
+        <div className="relative z-20">
+          <Navbar
+            shellClass={shellClass}
+            navItems={navItems}
+            activeSection={activeSection}
+            isMenuOpen={isMenuOpen}
+            onToggleMenu={() => setIsMenuOpen((prev) => !prev)}
+            onNavigate={handleNavClick}
+          />
 
         <main className="pb-14">
           <Hero
@@ -210,8 +211,9 @@ export default function HomePage() {
           />
         </main>
 
-        <Footer shellClass={shellClass} />
+          <Footer shellClass={shellClass} />
+        </div>
       </div>
-    </div>
+    </MotionConfig>
   );
 }

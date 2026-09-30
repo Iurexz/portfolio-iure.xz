@@ -121,7 +121,7 @@ export const projectsData = {
       name: "Em construção: Painel de Gerenciamento de Bot de Discord",
       body: "Em construção",
       tags: ["JavaScript", "Tailwind", "React"],
-      image: "/projects/dev.png",
+      image: "/projects/dev.webp",
       alt: "Interface de reservas do projeto Atlas Booking.",
       demoUrl: "",
       repoUrl: "",
